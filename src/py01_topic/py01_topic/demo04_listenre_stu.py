@@ -15,7 +15,7 @@ class MinimalSubscriber(Node):
         # **3-1.创建订阅方；
         self.subscription = self.create_subscription(Student,'topic_stu',self.listener_callback,10)
 
-    # **3-2.处理订阅到的消息。
+    # **3-2.处理订阅到的消息。。
     def listener_callback(self, stu):
         self.get_logger().info('订阅的消息: name=%s,age=%d,height=%.2f' % (stu.name, stu.age, stu.height))
 
